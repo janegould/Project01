@@ -1,8 +1,8 @@
-var numbersArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9"];
-
 var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
+var pokeImg;
 
-  $("#startBtn").on("click", function(){
+
+  $("#startBtn").on("click", function start(){
     document.getElementById("pokemon").innerHTML = "";
     $.ajax({
       url: queryURL1,
@@ -68,6 +68,9 @@ var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
             img.setAttribute("src", this.firstChild.getAttribute("src"));
             var spriteDiv = document.getElementById("sprite");
             spriteDiv.append(img);
+            var cell1 = document.getElementById("cell1");
+            cell1.append(spriteDiv);
+            pokeImg = img.getAttribute("src");
             moveSprite();
 
         })
@@ -85,7 +88,7 @@ var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
 
             var elStyle = window.getComputedStyle(sprite);
             var topValue = elStyle.getPropertyValue("top").replace("px", "");
-            sprite.style.top = (Number(topValue) + 20) + "px";
+            sprite.style.top = (Number(topValue) + 96) + "px";
 
             win();
 
@@ -95,7 +98,7 @@ var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
 
             var elStyle = window.getComputedStyle(sprite);
             var topValue = elStyle.getPropertyValue("top").replace("px", "");
-            sprite.style.top = (Number(topValue) - 20) + "px";
+            sprite.style.top = (Number(topValue) - 96) + "px";
 
             win();
           
@@ -105,7 +108,7 @@ var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
 
             var elStyle = window.getComputedStyle(sprite);
             var topValue = elStyle.getPropertyValue("left").replace("px", "");
-            sprite.style.left = (Number(topValue) + 20) + "px";
+            sprite.style.left = (Number(topValue) + 96) + "px";
 
             win();
           
@@ -115,7 +118,7 @@ var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
 
             var elStyle = window.getComputedStyle(sprite);
             var topValue = elStyle.getPropertyValue("left").replace("px", "");
-            sprite.style.left = (Number(topValue) - 20) + "px";
+            sprite.style.left = (Number(topValue) - 96) + "px";
             
             win();
           
@@ -128,17 +131,31 @@ var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
 
       function win(){
       
-        if($("#sprite").position().left == $("#end").position().left && $("#sprite").position().right == $("#end").position().right){
+        if($("#sprite").position().left == $("#cell36").position().left && document.getElementById("sprite").offsetTop == document.getElementById("cell36").offsetTop){
         
-          var winDiv = document.getElementById("win");
-          winDiv.style.visibility = "visible";
+          console.log("win");
+          var body = document.querySelector("body");
+          body.setAttribute("class", "end");
+          var x = document.getElementById("x");
+          x.remove();
+          var img = document.createElement("img");
+          img.setAttribute("src", pokeImg);
+          img.style.width = "300px";
+
+          body.append(img);
+
 
         }
         else{
 
         }
       }
+
+
+      
    
+      //endCell.append(endDiv);
+
 
     //when the user chooses one, then load pre-made maze 
 

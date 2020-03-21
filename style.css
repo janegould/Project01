@@ -181,29 +181,39 @@ select:focus {
   }
 }
 #sprite{
-  top: 20px;
-  left: 20px;
-  position: absolute;
+  top: 0px;
+  left: 0px;
+  position: relative;
   z-index: 1;
-}
-#end{
-  width: 96px;
-  height: 96px;
-  background-color: black;
-  top: 500px;
-  left: 500px;
-  position: absolute;
 }
 #win{
   visibility: hidden;
 }
 #grid{
-  height: 600px;
-  width: 600px;
-  margin-left: 300px;
+  height: 576px;
+  width: 576px;
+  position: absolute;
 }
-.cell{
-  width: 100px;
-  height: 100px;
+.cellx{
+  width: 96px;
+  height: 96px;
   border: black solid 1px;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+.end{
+
+}
+#cell36{
+  background-color: black;
+}
+.col-2{
+  flex: none;
+}
+.row{
+  margin: 0px;
+}
+#x{
+  visibility: visible;
 }
