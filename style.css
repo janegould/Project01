@@ -188,7 +188,7 @@ select:focus {
 }
 #end{
   width: 96px;
-  height: 100px;
+  height: 96px;
   background-color: black;
   top: 500px;
   left: 500px;
@@ -196,4 +196,14 @@ select:focus {
 }
 #win{
   visibility: hidden;
+}
+#grid{
+  height: 600px;
+  width: 600px;
+  margin-left: 300px;
+}
+.cell{
+  width: 100px;
+  height: 100px;
+  border: black solid 1px;
 }
