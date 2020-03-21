@@ -1,0 +1,225 @@
+
+#sprite{
+  top: 0px;
+  left: 0px;
+  position: relative;
+  z-index: 1;
+}
+#win{
+  visibility: hidden;
+}
+#grid{
+  height: 576px;
+  width: 576px;
+  position: absolute;
+}
+.cellx{
+  width: 96px;
+  height: 96px;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+.end{
+
+}
+#cell36{
+  background-color: black;
+}
+.col-2{
+  flex: none;
+}
+.row{
+  margin: 0px;
+}
+#x{
+  visibility: visible;
+}
+body.end{
+  height: 100%;
+  background-color: rgb(243, 184, 245);
+  background-image: url('https://media.giphy.com/media/2gavnHn2w5FXW/giphy.gif');
+  background-repeat: repeat-x;
+  background-position-y: 400px;
+  background-size: 450px;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f507c1, 0 0 40px #fc0ee8, 0 0 50px #e600c7, 0 0 60px #e600c7, 0 0 70px #f8067f;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ea4dff, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+#win{
+  visibility: hidden;
+}
+
+#winImg{
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+}
+
+body{
+  left: 100%;
+}
+
+.pink{
+  background-color: #f3bbee;
+  border: #f3bbee 1px;
+}
+.purple{
+  background-color: #d3a0e7;
+  border: #d3a0e7 1px;
+}
+#cell1{
+  border-bottom:  black solid 1px;
+}
+#cell2{
+  border-right:  black solid 1px;
+
+}
+#cell3{
+  
+
+}
+#cell4{
+
+}
+#cell5{
+  
+
+}
+#cell6{
+  border-left:  black solid 1px;
+
+}
+#cell7{
+  border-right:  black solid 1px;
+
+}
+#cell8{
+  
+  border-bottom:  black solid 1px;
+ 
+
+}
+#cell9{
+  border-bottom:  black solid 1px;
+  border-right:  black solid 1px;
+
+}
+#cell10{
+  border-right:  black solid 2px;
+
+}
+#cell11{
+  border-bottom:  black solid 2px;
+  border-right:  black solid 2px;
+}
+#cell12{
+  
+
+}
+#cell13{
+ 
+  border-bottom:  black solid 1px;
+
+}
+#cell14{
+
+}
+#cell15{
+ 
+  border-bottom:  black solid 1px;
+  border-right:  black solid 1px;
+}
+#cell16{
+ 
+  border-right:  black solid 1px;
+
+}
+#cell17{
+  
+}
+#cell18{
+}
+#cell19{
+  border-right:  black solid 1px;
+
+}
+#cell20{
+  
+
+}
+#cell21{
+  border-bottom:  black solid 1px;
+}
+#cell22{
+  
+  border-bottom:  black solid 1px;
+}
+#cell23{
+  border-bottom:  black solid 1px;
+
+}
+#cell24{
+
+  border-bottom:  black solid 1px;
+
+}
+#cell25{
+  
+  border-right:  black solid 1px;
+
+}
+#cell26{
+  border-right:  black solid 1px;
+}
+#cell27{
+
+
+}
+#cell28{
+
+}
+#cell29{
+ 
+
+}
+#cell30{
+}
+#cell31{
+  border-bottom:  black solid 1px;
+
+}
+#cell32{
+  border-bottom:  black solid 1px;
+}
+
+#cell33{
+  border-top:  black solid 1px;
+  border-bottom:  black solid 1px;
+
+
+}
+#cell34{
+ border-top:  black solid 1px;
+  border-bottom:  black solid 1px;
+}
+#cell35{
+  border-top:  black solid 1px;
+  border-bottom:  black solid 1px;
+}
