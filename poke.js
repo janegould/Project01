@@ -1,6 +1,6 @@
 var queryURL1 = "https://pokeapi.co/api/v2/pokemon/jigglypuff"
 var pokeImg;
-
+var cellNumber = 1;
 
   $("#startBtn").on("click", function start(){
     document.getElementById("pokemon").innerHTML = "";
@@ -83,46 +83,73 @@ var pokeImg;
 
         var sprite = document.getElementById("sprite");
         document.addEventListener("keydown", function(e){
-
+        
+          var sprite = document.getElementById("sprite");
           if(e.key == "ArrowDown"){
+            
+            var oldCell = document.getElementById("cell" + cellNumber + "");
+            var style = getComputedStyle(oldCell);
+            
+            if(style.borderBottom != "1px solid rgb(0, 0, 0)"){
+              
+              oldCell.innerHTML = "";
+              cellNumber = cellNumber + 6;
+              var newCell = document.getElementById("cell" + cellNumber + "");
+              newCell.append(sprite);
 
-            var elStyle = window.getComputedStyle(sprite);
-            var topValue = elStyle.getPropertyValue("top").replace("px", "");
-            sprite.style.top = (Number(topValue) + 96) + "px";
-
-            win();
-
+              win();
+            }
           }
 
           if(e.key == "ArrowUp"){
 
-            var elStyle = window.getComputedStyle(sprite);
-            var topValue = elStyle.getPropertyValue("top").replace("px", "");
-            sprite.style.top = (Number(topValue) - 96) + "px";
 
-            win();
-          
+            var oldCell = document.getElementById("cell" + cellNumber + "");
+            var style = getComputedStyle(oldCell);
+            
+            if(style.borderTop != "1px solid rgb(0, 0, 0)"){
+              
+              oldCell.innerHTML = "";
+              cellNumber = cellNumber - 6;
+              var newCell = document.getElementById("cell" + cellNumber + "");
+              newCell.append(sprite);
+
+
+              win();
+            }
           }
 
           if(e.key == "ArrowRight"){
 
-            var elStyle = window.getComputedStyle(sprite);
-            var topValue = elStyle.getPropertyValue("left").replace("px", "");
-            sprite.style.left = (Number(topValue) + 96) + "px";
-
-            win();
+            var oldCell = document.getElementById("cell" + cellNumber + "");
+            var style = getComputedStyle(oldCell);
+            
+            if(style.borderRight != "1px solid rgb(0, 0, 0)"){
+              
+              cellNumber = cellNumber + 1;
+              var newCell = document.getElementById("cell" + cellNumber + "");
+              newCell.append(sprite);
+            
+              win();
           
-          }
+          }}
 
           if(e.key == "ArrowLeft"){
 
-            var elStyle = window.getComputedStyle(sprite);
-            var topValue = elStyle.getPropertyValue("left").replace("px", "");
-            sprite.style.left = (Number(topValue) - 96) + "px";
+            var oldCell = document.getElementById("cell" + cellNumber + "");
             
+            var style = getComputedStyle(oldCell);
+          
+            if(style.borderLeft != "1px solid rgb(0, 0, 0)"){
+
+              oldCell.innerHTML = "";
+              cellNumber = cellNumber - 1;
+              var newCell = document.getElementById("cell" + cellNumber + "");
+              newCell.append(sprite);
+        
             win();
           
-          }
+          }}
 
         })
 
@@ -131,8 +158,8 @@ var pokeImg;
 
       function win(){
       
-        if($("#sprite").position().left == $("#cell36").position().left && document.getElementById("sprite").offsetTop == document.getElementById("cell36").offsetTop){
-        
+        if(document.getElementById("cell36").firstChild == document.getElementById("sprite")){
+
           console.log("win");
           var body = document.querySelector("body");
           body.setAttribute("class", "end");
@@ -140,7 +167,10 @@ var pokeImg;
           x.remove();
           var img = document.createElement("img");
           img.setAttribute("src", pokeImg);
+          img.setAttribute("id", "winImg");
           img.style.width = "300px";
+          var winDiv = document.getElementById("win");
+          winDiv.style.visibility = "visible";
 
           body.append(img);
 
@@ -150,22 +180,3 @@ var pokeImg;
 
         }
       }
-
-
-      
-   
-      //endCell.append(endDiv);
-
-
-    //when the user chooses one, then load pre-made maze 
-
-        //then take chosen pokemon and put on starting box
-
-        //add event listener for the up arrow key press
-            //(how do you do keypress up event listener (38 is key up))
-
-        // make logic to move pokemon one square up
-
-        //make logic for when pokemon reaches end game 
-
-            //pop up message 
