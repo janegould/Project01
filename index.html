@@ -8,13 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="viewScoreDiv" style="visibility: hidden;">
+        <ul id="scoreUl"></ul>
+        <button id="hideScore" onclick="hideScore()">Game</button>
+    </div>
     <div id= "win">
         <h1 class = "glow"> YOU WIN!</h1>
+        <div id="score">
+        </div>
+    
+        <input id="nameInput" placeholder="Name"  type="text">
+        <button type="submit" onclick="upScore()">submit</button>
     </div>
     <div id="x">
     <div id ="pokemon"></div>
 
     <button id="startBtn">Start</button>
+    <button id="scoreBtn" onclick="viewScore()">View scores</button>
+    <div id="timer"></div>
 
     <div id="sprite"></div>
    
@@ -68,6 +79,9 @@
             <div class="col-2 cellx purple" id="cell35"></div>
             <div class="col-2 cellx pink" id="cell36"></div>
         </div>
+    </div>
+    <div id="video">
+        <iframe width="560" height="315" src="" id="iframe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
