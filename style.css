@@ -1,14 +1,44 @@
-html,
-body {
-  width: 100vw;
-  height: 100vh;
+html{
+  background-image: url(https://cdn.wallpaperjam.com/content/images/07/86/078637c023144f977592b1e4a30e37494ea12d44.png);
+  height: 100%;
+  width: 100%;
+}
+
+#startBtn {
+  margin-top: auto;
+  margin-left: 40%;
   position: fixed;
-  padding: 0;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  background-image: linear-gradient (to bottom, navy, blue);
+  background-color: white;
+  background-blend-mode: hard-light;
+  height: 108px;
+  width: 350px;
+  border: .5;
+  border-radius: 50px;
+  box-shadow: lightslategray, 10px 10px;
+  color: #ab4c38;
+  font-size: 75px;
+  font-weight: 900;
+}
+
+#pokemon{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 41%;
+
+}
+
+#title{
+  margin-top: 50px;
+  margin-left: 40%;
+  object-fit: cover;
+  width: 50px;
+  height: 100px;
+  font-size: 64px;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 600;
+  color: #d5c35b;
+
 }
 
 #mazeContainer {
@@ -179,4 +209,21 @@ select:focus {
   input, select {
     width: 120px;
   }
+}
+#sprite{
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  z-index: 1;
+}
+#end{
+  width: 96px;
+  height: 100px;
+  background-color: black;
+  top: 500px;
+  left: 500px;
+  position: absolute;
+}
+#win{
+  visibility: hidden;
 }
